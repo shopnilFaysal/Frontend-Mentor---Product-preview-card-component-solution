@@ -1,0 +1,121 @@
+:root{
+  --darkCyan: hsl(158, 36%, 37%);
+--creamColor: hsl(30, 38%, 92%);
+--veryDarkBlue: hsl(212, 21%, 14%);
+--darkGrayishBlue: hsl(228, 12%, 48%);
+--whiteColor: hsl(0, 0%, 100%);
+--primaryFont: 'Montserrat', sans-serif;
+--secFont: 'Fraunces', serif;
+}
+*,*::after,*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+html,body{
+  height: 100%;
+}
+body{
+  background: var(--creamColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile{
+  display: none;
+  border-radius: 10px 10px 0 0;
+}
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
+.main{
+  width: 600px;
+  display: flex;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+.picture{
+  flex-basis: 50%;
+}
+.desktop{
+  display: block;
+  border-radius: 10px 0 0 10px;
+}
+.text{
+flex-basis: 50%;
+background: var(--whiteColor);
+border-radius: 0 10px 10px 0;
+padding: 30px;
+
+}
+.headText{
+  text-transform: uppercase;
+  color: var(--darkGrayishBlue);
+  font-family: var(--primaryFont);
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.text h2{
+  font-size: 32px;
+  font-family: var(--secFont);
+  color: var(--veryDarkBlue);
+  padding-bottom: 20px;
+}
+.mainText{
+  font-family: var(--primaryFont);
+  line-height: 20px;
+  font-size: 14px;
+  color: var(--darkGrayishBlue);
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+.price{
+  font-size: 32px;
+font-family: var(--secFont);
+color: var(--darkCyan);
+font-weight: 700;
+padding-bottom: 20px;
+}
+.price span{
+  font-size: 14px;
+  text-decoration: line-through;
+  position: relative;
+  top: -5px;
+  padding-left: 10px;
+  color: var(--darkGrayishBlue);
+  font-weight: 400;
+}
+button{
+  width: 100%;
+  height: 50px;
+  background: var(--darkCyan);
+  color: var(--whiteColor);
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+button img{
+  padding-right: 10px;
+}
+
+@media only screen and (max-width:500px) {
+  body{
+    align-items: flex-start;
+  }
+  .main{
+    width: 90%;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+}
